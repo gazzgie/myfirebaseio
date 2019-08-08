@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>idealist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+  <h3>
+    Wellcome Sir!
+  </h3>
+  <p>
+    List note.
+  </p>
+  <ion-list>
+    <ion-item button [routerLink]="['/idea', idea.id]" *ngFor="let idea of (ideas | async)">
+      Name : {{ idea.name }}
+            
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" [routerLink]="['/idea']" routerDirection="forward">Add New</ion-button>
+</ion-content>
+
+
+  
